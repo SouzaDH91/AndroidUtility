@@ -1,0 +1,14 @@
+F:\projetos visual studio\AndroidUtility\bin\Debug\AndroidUtility.exe.config
+F:\projetos visual studio\AndroidUtility\bin\Debug\AndroidUtility.exe
+F:\projetos visual studio\AndroidUtility\bin\Debug\AndroidUtility.pdb
+F:\projetos visual studio\AndroidUtility\obj\Debug\AndroidUtility.frmMain.resources
+F:\projetos visual studio\AndroidUtility\obj\Debug\AndroidUtility.Properties.Resources.resources
+F:\projetos visual studio\AndroidUtility\obj\Debug\AndroidUtility.csproj.GenerateResource.cache
+F:\projetos visual studio\AndroidUtility\obj\Debug\AndroidUtility.csproj.CoreCompileInputs.cache
+F:\projetos visual studio\AndroidUtility\obj\Debug\AndroidUtility.exe
+F:\projetos visual studio\AndroidUtility\obj\Debug\AndroidUtility.pdb
+F:\projetos visual studio\AndroidUtility\obj\Debug\AndroidUtility.csprojAssemblyReference.cache
+F:\projetos visual studio\AndroidUtility\bin\Debug\AndroidUtility.exe.manifest
+F:\projetos visual studio\AndroidUtility\bin\Debug\AndroidUtility.application
+F:\projetos visual studio\AndroidUtility\obj\Debug\AndroidUtility.exe.manifest
+F:\projetos visual studio\AndroidUtility\obj\Debug\AndroidUtility.application
