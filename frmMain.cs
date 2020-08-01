@@ -89,7 +89,7 @@ namespace AndroidUtility
         public void Verificacoes()
         {
             // JavaJDK
-            if (IsSoftwareInstalled("Java SE Development Kit 8 Update 231 (64-bit)"))
+            if (IsSoftwareInstalled("Java SE Development Kit"))
             {
                 lblRetornoJavaJDK.Text = "OK";
                 lblRetornoJavaJDK.ForeColor = Color.Green;
