@@ -4,6 +4,8 @@ O mesmo também verifica se o Java SDK está instalado e se a variável de ambie
 
 Versão do Java SDK usado: Java SE Development Kit 8 Update 231 (64-bit)
 
+Obs: Por enquanto o programa só funciona com essa versão do Java SDK, mais pra frente verei alguma forma de verificar qualquer versão do Java. Essa primeira versão foi mais pra um aprendizado.
+
 
 
 <p align="center">
