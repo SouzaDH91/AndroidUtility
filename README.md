@@ -8,7 +8,7 @@ Versão do Java SDK usado: Java SE Development Kit 8 Update 231 (64-bit)
 
 <p align="center">
   <img src="https://imagizer.imageshack.com/img922/2847/6qLSfM.png" width="350" alt="Programa Android Utility">
-  <img src="https://imagizer.imageshack.com/img923/6949/ZBDQQL.png" width="650" alt="Emulador Android">
+  <img src="https://imagizer.imageshack.com/img923/6949/ZBDQQL.png" width="600" alt="Emulador Android">
 </p>
 
 
