@@ -9,20 +9,23 @@ namespace AndroidUtility
 {
     public class Config
     {
-        private static string _file = "avd.cfg";
+        private static string _file = "";
 
         //Método que cria o arquivo txt caso ele não exista, Void por que não retorna nada.
         private static void verifyFile()
         {
+            _file = "avd.cfg";
             if (!File.Exists(_file))//Verifica se o arquivo existe, retorna true, neguei a condição, então se o arquivo não existir ele entra no IF.
             {
                 File.Create(_file);//Cria um arquivo, no caso, cria o arquivo informado na variável _file.
             }
         }
+
         public static void writeData(String avd_id)
         {
             verifyFile(); //Chama nosso método que cria o arquivo caso ele não exista.
 
+            _file = "avd.cfg";
             StreamWriter streamW = new StreamWriter(_file);
             /*Criamos um novo objeto do tipo StreamWriter, passamos o nome do nosso arquivo.
              * o true informa que deve continuar gravando no arquivo, isto quer dizer que ele não vai limpar e escrever tudo de novo.
@@ -39,7 +42,7 @@ namespace AndroidUtility
 
         public static string readFile()
         {
-
+            _file = "avd.cfg";
             string text = ""; //Criamos uma variável que vai armazenar o resultado da nossa consulta no arquivo.
 
             verifyFile(); //Chamamos novamente nosso método, caso o arquivo não exista ele cria, pois se o arquivo não existir e ele tentar ler vai travar o sistema

@@ -24,7 +24,7 @@ namespace AndroidUtility
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnExecutar.Enabled = false;
+            btnExecutar.Enabled = true;
             Verificacoes();
 
             if (Config.readFile() != null)
@@ -32,6 +32,10 @@ namespace AndroidUtility
                 String[] avd = Config.readFile().Split('=');
 
                 tbAVDID.Text = avd[1];
+            }
+            else
+            {
+                tbAVDID.Text = "";
             }
         }
 
