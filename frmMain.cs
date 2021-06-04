@@ -26,22 +26,50 @@ namespace AndroidUtility
         {
             btnExecutar.Enabled = false;
             Verificacoes();
+
+            if (Config.readFile() != null)
+            {
+                String[] avd = Config.readFile().Split('=');
+
+                tbAVDID.Text = avd[1];
+            }
         }
 
         // AVD_ID = Pixel_2_-_Android_8.1
         private void btnExecutar_Click(object sender, EventArgs e)
         {
-            if (tbAVDID.Text != String.Empty)
+            if (tbAVDID.Text != String.Empty && Config.readFile() != null)
             {
-                Process p = new Process();
-                p.StartInfo.FileName = "cmd.exe";
-                p.StartInfo.Arguments = ComandoCompleto(avd.Text);
-                p.Start();
+                String[] avd = Config.readFile().Split('=');
+
+                if (avd[1] == tbAVDID.Text)
+                {
+                    tbAVDID.Text = Config.readFile();
+                    this.startAvd();
+                }
+                else
+                {
+                    Config.writeData(tbAVDID.Text);
+                    this.startAvd();
+                }
+            }
+            else if (tbAVDID.Text.Length > 0 && Config.readFile() == null)
+            {
+                Config.writeData(tbAVDID.Text);
+                this.startAvd();
             }
             else
             {
                 MessageBox.Show("Informe o AVD_ID!!!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void startAvd()
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = "cmd.exe";
+            p.StartInfo.Arguments = ComandoCompleto(avd.Text);
+            p.Start();
         }
 
         // Metodo que verica se o programa está instalado
@@ -55,6 +83,7 @@ namespace AndroidUtility
 
             var is64BitSoftwareInstalled = IsSoftwareInstalled(softwareName, RegistryView.Registry64, registryUninstallPath);
             var is32BitSoftwareInstalled = IsSoftwareInstalled(softwareName, RegistryView.Registry64, registryUninstallPathFor32BitOn64Bit);
+
             return is64BitSoftwareInstalled || is32BitSoftwareInstalled;
         }
 
