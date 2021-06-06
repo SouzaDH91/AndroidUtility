@@ -42,13 +42,13 @@ namespace AndroidUtility
         // AVD_ID = Pixel_2_-_Android_8.1
         private void btnExecutar_Click(object sender, EventArgs e)
         {
-            if (tbAVDID.Text != String.Empty && Config.readFile() != null)
+            if (tbAVDID.Text != String.Empty && Config.readFile() == null)
             {
+                Config.writeData(tbAVDID.Text);
                 String[] avd = Config.readFile().Split('=');
 
                 if (avd[1] == tbAVDID.Text)
                 {
-                    tbAVDID.Text = Config.readFile();
                     this.startAvd();
                 }
                 else
@@ -56,11 +56,6 @@ namespace AndroidUtility
                     Config.writeData(tbAVDID.Text);
                     this.startAvd();
                 }
-            }
-            else if (tbAVDID.Text.Length > 0 && Config.readFile() == null)
-            {
-                Config.writeData(tbAVDID.Text);
-                this.startAvd();
             }
             else
             {
