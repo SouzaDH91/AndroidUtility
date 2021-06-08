@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AndroidUtility.exe" size="365024">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AndroidUtility.exe" size="364512">
       <assemblyIdentity name="AndroidUtility" version="1.1.0.2" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0z/rCScJXQR6vMzqdgfB5wHGvUr5AT3e7tSUBlKo/Os=</dsig:DigestValue>
+        <dsig:DigestValue>fwx/K+hhYT/tWxrEGkJqBypVIsU6zghkD2pMC7wYac0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

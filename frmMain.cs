@@ -29,9 +29,7 @@ namespace AndroidUtility
 
             if (Config.readFile() != null)
             {
-                String[] avd = Config.readFile().Split('=');
-
-                tbAVDID.Text = avd[1];
+                tbAVDID.Text = Config.readFile();
             }
             else
             {
@@ -45,15 +43,19 @@ namespace AndroidUtility
             if (tbAVDID.Text != String.Empty && Config.readFile() == null)
             {
                 Config.writeData(tbAVDID.Text);
-                String[] avd = Config.readFile().Split('=');
-
-                if (avd[1] == tbAVDID.Text)
+                this.startAvd();
+            }
+            else if (Config.readFile() != null)
+            {
+                if (Config.readFile() == tbAVDID.Text)
                 {
+                    tbAVDID.Text = Config.readFile();
                     this.startAvd();
                 }
                 else
                 {
                     Config.writeData(tbAVDID.Text);
+                    tbAVDID.Text = Config.readFile();
                     this.startAvd();
                 }
             }

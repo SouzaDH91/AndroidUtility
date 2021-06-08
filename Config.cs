@@ -32,7 +32,7 @@ namespace AndroidUtility
              * Se remover o true toda vez que for gravar uma informação nosso arquivo será limpado e as informações anteriores serão perdidas.
              */
 
-            streamW.WriteLine("AVD_ID=" + avd_id);
+            streamW.WriteLine(avd_id);
             /*Através do objeto streamW acessamos o método WriteLine e passamos os textos que queremos gravar.
              * 
              */
